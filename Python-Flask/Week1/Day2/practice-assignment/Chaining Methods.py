@@ -27,27 +27,4 @@ salma.make_deposit(500).make_deposit(500).make_deposit(500).make_withdrawal(175)
 nour.make_deposit(500).make_deposit(500).make_withdrawal(175).make_withdrawal(175).display_user_balance()
 guido.make_deposit(500).make_withdrawal(175).make_withdrawal(175).make_withdrawal(175).display_user_balance()
 
-# salma.make_deposit(500)
-# salma.make_deposit(500)
-# salma.make_deposit(500)
-# nour.make_deposit(500)
-# nour.make_deposit(500)
-# guido.make_deposit(500)
 
-
-# print(guido.account_balance)
-
-# salma.make_withdrawal(175)
-# salma.make_withdrawal(175)
-# salma.make_withdrawal(175)
-# nour.make_withdrawal(175)
-# nour.make_withdrawal(175)
-# guido.make_withdrawal(175)
-# guido.make_withdrawal(175)
-# guido.make_withdrawal(175)
-# print(guido.account_balance)
-
-
-# guido.display_user_balance()
-# salma.display_user_balance()
-# nour.display_user_balance()
