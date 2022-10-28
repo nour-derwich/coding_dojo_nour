@@ -2,7 +2,7 @@ body{
     justify-content: center;
     text-align: center;
     justify-content: space-between;
-    
+    background-color: --body-color;
 }
 
 

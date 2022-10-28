@@ -26,11 +26,11 @@ app = Flask(__name__)
 #     return render_template('404.html'), 404
 
 #playground >>>>>>>
-@app.route('/<int:HINT>/<string:color>')         
-def index(HINT,color):
-    return render_template("index.html", times=HINT,color=color)  
+# @app.route('/<int:HINT>/<string:color>')         
+# def index(HINT,color):
+#     return render_template("index.html", times=HINT,color=color)  
 
-
+#checkeboard
 
 
 
