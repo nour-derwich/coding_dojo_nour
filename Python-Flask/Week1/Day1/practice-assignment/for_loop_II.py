@@ -1,55 +1,60 @@
-def countdown(x):
-    arr = []
-    for i in range(x,-1,-1):
-        arr.append(i)
+
+def coutdown(num):
+ arr=[]
+ for i in range(num ,-1,-1):
+    arr.append(i)
     print(arr)
-    return arr
-
-y= countdown(5)
-print(y)
+ return arr
 
 
-def print_and_return(a):
-    print(a[0])
-    return[a[1]]
+food=coutdown(5)
+print(food)
+#############################
+def print_and_return(book):
+   print(book[0])
+   return[book[1]]
 
-list =  print_and_return([1,2])
-print(list)
+Note_Book=print_and_return([3,15])
+print (Note_Book)
+##########################################
+def first_plus_length(x):
+   sum=x[0]+len(x)
+   return sum
+test=first_plus_length([1,5,6,8,9,66,552,852])
+print(test)
+######################################
+new_list=[]
+def values_greater_than_second(arr):
+   v=0
+   if len(arr)>1 :
+      for i in range(0,len(arr)):
+       if arr[i]>arr[1]:
+        new_list.append(arr[i])
+       else:
+         v+=1
+      print(v)
+      return new_list
+   else:
+      return False
 
-def first_plus_length(s):
-    sum= s[0]+ len(s)
-    return sum
+lol = values_greater_than_second([0,3,0,10,1,4]) 
+print(lol)
 
-result= first_plus_length([1,2,3,4,5]) 
-print(result)
-[1,2,3,4,5]
-newlist = []
-def values_greater_than_second(list1):
-    count = 0 
-    if len(list1)>1:
-        for i in  range(0,len(list1)):
-            if list1[i]>list1[1]:
-                newlist.append(list1[i])
-            else:
-                count = count + 1
-        print(count)
-        return newlist
-    else:
-        return False
+erre = values_greater_than_second([100])
+print(erre)
 
-
-z = values_greater_than_second([5,2,3,2,1,4]) 
-print(z)
-
-s = values_greater_than_second([3])
-print(s)
-
-
-list3=[]
+####################################
+list0=[]
 def length_and_value(size,value):
-    for i in range(0,size):
-        list3.append(value)
-    return(list3)
-
-result=length_and_value(4,7)
+   for j in range(0, size):
+      list0.append(value)
+   return list0
+result=length_and_value(3,5)
 print(result)
+
+
+
+
+
+
+        

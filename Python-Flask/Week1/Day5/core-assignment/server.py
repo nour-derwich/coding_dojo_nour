@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, redirect,session
 app = Flask(__name__) 
 app.secret_key="erre"
 
-@app.route('/')         
+@app.route('/', methods=['POST'])         
 def index():
 
     if 'count' not in session:
