@@ -13,18 +13,5 @@ def create_user():
     # Instead we will redirect to our index route.
     return redirect('/')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 if __name__=="__main__":  
     app.run(debug=True)
