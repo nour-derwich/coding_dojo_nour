@@ -6,24 +6,24 @@
 
 
 # #2
-def number_of_military_branches():
-    return 5
-print(number_of_days_in_a_week_silicon_or_triangle_sides() + number_of_military_branches())
+# def number_of_military_branches():
+#     return 5
+# print(number_of_days_in_a_week_silicon_or_triangle_sides() + number_of_military_branches())
 
-
+# #  undefined
 # #3
 # def number_of_books_on_hold():
 #     return 5
 #     return 10
 # print(number_of_books_on_hold())
-
+#>>5
 
 # #4
 # def number_of_fingers():
 #     return 5
 #     print(10)
 # print(number_of_fingers())
-
+#>>5
 
 # #5
 # def number_of_great_lakes():
@@ -131,3 +131,22 @@ print(number_of_days_in_a_week_silicon_or_triangle_sides() + number_of_military_
 #     return 5
 # y = foo()
 # print(y)
+class BankAccount:
+    # ... __init__ goes here
+    def with_draw(self,amount):
+        # we can use the static method here to evaluate
+        # if we can withdraw the funds without going negative
+        if BankAccount.can_withdraw(self.balance,amount):
+            self.balance -= amount
+        else:
+            print("Insufficient Funds")
+        return self
+    # static methods have no access to any attribute
+    # only to what is passed into it
+    @staticmethod
+    def can_withdraw(balance,amount):
+    	if (balance - amount) < 0:
+            return False
+        else:
+            return True
+
