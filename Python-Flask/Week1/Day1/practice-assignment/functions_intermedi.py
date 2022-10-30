@@ -24,9 +24,30 @@ students = [
 ]
 def iterateDictionary(some_list):
 
-for studentObj in students:
-    for key,vlu in studentObj.items():
-       rults+=f"{}"
+ for studentObj in students:
+    for key,val in studentObj.items():
+       rults+=f" {key} - {val},"
   
 
 iterateDictionary(students)
+############
+def iterateDictionary2(key_name, some_list):
+    for i in range(0,len(some_list)):
+        for key,vale in some_list[i].items():
+            if key == key_name:
+                print(vale)
+
+e=iterateDictionary2('first_name', students)
+
+
+dojo = {
+    'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
+    'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
+}
+
+
+
+for key, value in dojo.items():
+    print(len(value), key)
+    for i in value: 
+        print(i)
