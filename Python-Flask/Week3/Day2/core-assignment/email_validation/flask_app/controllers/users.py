@@ -1,26 +1,33 @@
 from flask_app import app
 from flask import render_template,redirect,request , session
 from flask_app.models.user import User
-from flask_bcrypt import Bcrypt
-bcrypt = Bcrypt(app)
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
 @app.route('/create',methods=['post'])
 def create():
-    if User.validate_user(request.form) == False:
+    if User.validate_email(request.form) == False:
         return redirect('/')
-    pw_hash = bcrypt.generate_password_hash(request.form['password'])
-    print(pw_hash)
     data ={
-            'first_name':request.form['first_name'],
-            'last_name':request.form['last_name'],
-            'email':request.form['email'],
-            'password':pw_hash
+            'email':request.form['email']
+            
     }
     return_form_db=User.create(data)
     session['user_id']=return_form_db
     print("-"*20, return_form_db ,"-"*20)
-    return  redirect('/')
+    return  redirect('/results')
+
+@app.route('/results')
+def results():
+    return render_template('success.html', all_emails=User.get_all_users())
+@app.route('/destroy/<int:id>')
+def destroy_email(id):
+    data = {
+        "id": id
+    }
+    User.destroy(data)
+    return redirect('/results')
     
