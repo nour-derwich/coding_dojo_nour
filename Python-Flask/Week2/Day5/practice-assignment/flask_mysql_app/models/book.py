@@ -23,3 +23,9 @@ class Book:
             list_books_from_db.append(cls(row))
             
         return list_books_from_db
+#get one 
+    @classmethod
+    def get_books_by_id(cls,data):
+        query = "SELECT * FROM books.books WHERE id = %(id)s;"
+        results = connectToMySQL(cls.db_name).query_db(query,data)
+        return cls(results[0])

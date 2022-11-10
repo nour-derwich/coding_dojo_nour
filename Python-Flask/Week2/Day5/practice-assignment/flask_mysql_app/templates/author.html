@@ -25,7 +25,7 @@
     {
         justify-content: space-around;
     }
-   
+
 </style>
 <body>
     <div class="flex space">
@@ -48,7 +48,7 @@
             </div>
             <div class="card2_body">
                 {% for author in list_authors %}
-            <p class="card-text"><a href="">{{author["name"]}}</a></p>
+            <p class="card-text"><a href="/show_author/{{author.id}}">{{author["name"]}}</a></p>
                 {% endfor %}
             </div>
             <a class="btn btn-primary" href="/book">add books</a>

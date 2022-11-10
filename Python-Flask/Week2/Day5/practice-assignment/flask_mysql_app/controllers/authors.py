@@ -24,3 +24,11 @@ def create_Author():
 @app.route('/book')
 def new_user():
     return render_template('books.html')
+
+@app.route('/show_author/<int:id>')
+def show_author(id):
+    data={
+        'id':id
+    }
+    one_authors = Author.get_by_id(data)
+    return render_template('show_author.html', one_authors = one_authors)

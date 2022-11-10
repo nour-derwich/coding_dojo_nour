@@ -10,7 +10,6 @@ class User:
         self.email = data["email"]
 
         self.created_t = data["created_t"]
-      
 #insert data
     @classmethod
     def create(cls,data):

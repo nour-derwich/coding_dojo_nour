@@ -5,7 +5,7 @@ from flask_mysql_app.models.book import Book
 
 
 
-@app.route('/new_book')
+@app.route('/book')
 def create_book1():
     list_books = Book.get_all_books()
     return render_template('books.html',  list_books =  list_books)
@@ -14,10 +14,13 @@ def create_book1():
 @app.route('/create_book1', methods=['post'])
 def book():
     print(request.form)
-    data = {
-        "title": request.form["title"],
-        "num_of_pages": request.form["num_of_pages"]
-        
+    Book.create_book(request.form)
+    return  redirect('/book')
+
+@app.route('/show_books/<int:id>')
+def show_books(id):
+    data={
+        'id':id
     }
-    Book.create_book(data)
-    return  redirect('/')
+    one_books= Book.get_books_by_id(data)
+    return render_template('show_book.html', one_books= one_books)
